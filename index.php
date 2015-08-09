@@ -1,4 +1,4 @@
-<?php if (basename($_SERVER['REQUEST_URI']) == 'index.php') : ?>
+<?php if (basename($_SERVER['REQUEST_URI']) == 'index.php' || basename($_SERVER['REQUEST_URI']) ==  basename(getcwd())) : ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
