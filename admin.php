@@ -28,10 +28,11 @@
 		<div id="current_pages" class="six columns">
 			<h3>Current Pages</h3>
 			<hr />
-			<ul>
+			<ul id="page-list">
 				<?php
 				$pagepath = glob("pages/*/*.php");
 				foreach ($pagepath as $page) {
+					$page = basename($page).PHP_EOL;
 					echo "<li>".$page."</li>";
 				}
 				?>
