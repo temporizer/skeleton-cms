@@ -5,14 +5,14 @@
 		$pagelist = glob("pages/*/*.php");
 			foreach ($pagelist as $pages) {
 				$pagesSplit = explode("/",$pages);
-				echo '<li><a href="'.$pagesSplit[1].'.php" title="'. $pages .'">'. $pagesSplit[1] .'</a></li>';
+				echo '<li><a href="'. $pages .'" title="'. $pages .'">'. str_replace("-", " ",$pagesSplit[1]) .'</a></li>';
 			}
 
 		//for every other page
 		$pagelist = glob("../../pages/*/*.php");
 			foreach ($pagelist as $pages) {
 				$pagesSplit = explode("/",$pages);
-				echo '<li><a href="'. $pagesSplit[1] .'.php" title="'. $pages .'">'. $pagesSplit[3] .'</a></li>';
+				echo '<li><a href="'. $pages .'" title="'. $pages .'">'. str_replace("-", " ",$pagesSplit[3]) .'</a></li>';
 			}
 	?>
 </ul>

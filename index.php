@@ -1,4 +1,3 @@
-<?php if (basename($_SERVER['REQUEST_URI']) == 'index.php' || basename($_SERVER['REQUEST_URI']) ==  basename(getcwd())) : ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,9 +35,3 @@
 	<script type="text/javascript" src="js/module.js"></script>
 </body>
 </html>
-<?php else :
-$file = basename($_SERVER['REQUEST_URI']);
-$file = preg_replace('/\\.[^.\\s]{3,4}$/', '', $file);
-include 'pages/'.$file.'/'.$file.'.php'; 
-				
-endif;?>
