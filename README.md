@@ -10,7 +10,7 @@ To create new modules select the page you want the module to display on. If you 
 You can add HTML, CSS and JavaScript to your pages by directly entering it into the "Moduel Content" block.</p>
 If you would like to add images, first upload the image you would like to display, refresh the page, copy the image path and put it into an HTML image tag. See example:
 
-*For index.php -  `<img src="images/image_path_name.jpg" alt="image_description" />`
-*For all other pages - `<img src="../../images/image_path_name.jpg" alt="image_description" />`
+-For index.php :  `<img src="images/image_path_name.jpg" alt="image_description" />`
+-For all other pages : `<img src="../../images/image_path_name.jpg" alt="image_description" />`
 
 Select your column width to dicatate how far the module will span accross screen.
