@@ -1,0 +1,116 @@
+/*admin interface */
+html, body, .container{
+	height: 100%;
+}
+
+img{
+	max-width: 100%;
+}
+
+#admin-tabs{
+	margin-top: 15px;
+	height: 100px;
+}
+
+#documentation{
+	display: none;
+}
+
+.container{
+	max-width: 90%;
+	clear: both;
+}
+
+textarea{
+	width: 100%;
+	min-height: 300px;
+}
+
+#current_pages, #current_modules, #current_images{
+max-height: 900px;
+overflow: scroll;
+}
+
+#current_images li{
+	list-style: none;
+	text-align: center;
+}
+
+#current_images img{
+	max-width: 100px;
+}
+
+#current_images p{
+	word-wrap: break-word;
+}
+
+
+/*image upload */
+#image-upload{
+	background-color: #33C3F0;
+}
+
+#image-upload h2{
+	margin-left: -140px;
+    color: #fff;
+}
+
+.loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+.loading .bullet {
+    position: absolute;
+    padding: 5px;
+    border-radius: 50%;
+    background: #fff;
+    -webkit-animation: animIn 1s ease-in-out 0s infinite;
+    animation: animIn 1s ease-in-out 0s infinite;
+}
+.loading .bullet:nth-child(1) {
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+}
+.loading .bullet:nth-child(2) {
+    -webkit-animation-delay: 0.15s;
+    animation-delay: 0.15s;
+}
+.loading .bullet:nth-child(3) {
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+}
+.loading .bullet:nth-child(4) {
+    -webkit-animation-delay: 0.45s;
+    animation-delay: 0.45s;
+}
+@-webkit-keyframes animIn {
+    0% {
+        -webkit-transform: translateX(-100px);
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: translateX(100px);
+        transform: translateX(100px);
+        opacity: 0;
+    }
+}
+@keyframes animIn {
+    0% {
+        -webkit-transform: translateX(-100px);
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: translateX(100px);
+        transform: translateX(100px);
+        opacity: 0;
+    }
+}
