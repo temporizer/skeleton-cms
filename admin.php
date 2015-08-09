@@ -108,7 +108,7 @@
 				<hr />
 				<ul>
 					<?php
-					$imagepath = glob("images/*");
+					$imagepath = glob("uploads/*");
 					foreach ($imagepath as $image) {
 						echo '<a href="' . $image . '"><li class="six columns"> <img src="' . $image . '"/><p>' . $image .'</p></li></a>';
 					}
