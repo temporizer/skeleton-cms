@@ -16,6 +16,7 @@
 	<div class="row twelve columns">
 		<div class="six columns">
 			<h3>Create New Page</h3>
+			<div id="page-confirm"></div>
 			<hr />
 			<form id="new_page">
 				<label>Page Title</label>
@@ -41,6 +42,7 @@
 	<div class="row twelve columns">
 		<div class="six columns">
 			<h3>Create New Module</h3>
+			<div id="module-confirm"></div>
 			<hr />
 			<form id="new_module">
 				<label>Assign To Page</label>
