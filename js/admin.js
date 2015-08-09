@@ -20,27 +20,24 @@ jQuery(document).ready(function($){
         	data: {page_title : $('#page_title').val()},
         })
         .done(function(data) {
-			var confirm = document.getElementById("page-confirm");
-			confirm.style.backgroundColor = "#a0d3e8";
-			confirm.style.display = "block";
-			confirm.innerHTML = 'New page created successfully!<a href="#" id="page-confirm-close">x</a>';
-			document.getElementById("page-confirm-close").addEventListener("click", pageCloser);
+			$("#page-confirm").css("background-color", "#a0d3e8");
+			$("#page-confirm").css("display", "block");
+			$("#page-confirm").html('New page created successfully!<a href="#" id="page-confirm-close">x</a>');
+			$("#page-confirm-close").bind("click", pageCloser);
         	console.log("new page created");
         })
         .fail(function() {
-			var confirm = document.getElementById("page-confirm");
-			confirm.style.backgroundColor = "#f08a24";
-			confirm.style.display = "block";
-			confirm.innerHTML = 'Error! New page not created.<a href="#" id="page-confirm-close">x</a>';
-			document.getElementById("page-confirm-close").addEventListener("click", pageCloser);
+			$("#page-confirm").css("background-color", "#f08a24");
+			$("#page-confirm").css("display", "block");
+			$("#page-confirm").html('Error! New page not created.<a href="#" id="page-confirm-close">x</a>');
+			$("#page-confirm-close").bind("click", pageCloser);
         	console.log("error, page creation failed");
         })
         .always(function() {
         	console.log("module page complete");
         });
 		function pageCloser() {
-			var confirm = document.getElementById("page-confirm");
-			confirm.style.display = "none";
+			$("#page-confirm").css("display", "none");
 		}
     });
 
@@ -53,27 +50,24 @@ jQuery(document).ready(function($){
         	data: {select_page : $('#select_page').val(), order : $('#order').val(), module_title : $('#module_title').val(), module_textarea : $('#module_textarea').val(), column_width : $('#column_width').val()},
         })
         .done(function(data) {
-			var modconfirm = document.getElementById("module-confirm");
-			modconfirm.style.backgroundColor = "#a0d3e8";
-			modconfirm.style.display = "block";
-			modconfirm.innerHTML = 'New module created successfully!<a href="#" id="module-confirm-close">x</a>';
-			document.getElementById("module-confirm-close").addEventListener("click", modCloser);
+			$("#module-confirm").css("background-color", "#a0d3e8");
+			$("#module-confirm").css("display", "block");
+			$("#module-confirm").html('New module created successfully!<a href="#" id="module-confirm-close">x</a>');
+			$("#module-confirm-close").bind("click", modCloser);
         	console.log("new module created");
         })
         .fail(function() {
-			var modconfirm = document.getElementById("module-confirm");
-			modconfirm.style.backgroundColor = "#f08a24";
-			modconfirm.style.display = "block";
-			modconfirm.innerHTML = 'Error! New module not created.<a href="#" id="module-confirm-close">x</a>';
-			document.getElementById("module-confirm-close").addEventListener("click", modCloser);
+			$("#module-confirm").css("background-color", "#f08a24");
+			$("#module-confirm").css("display", "block");
+			$("#module-confirm").html('Error! New module not created.<a href="#" id="module-confirm-close">x</a>');
+			$("#module-confirm-close").bind("click", modCloser);
         	console.log("error, module creation failed");
         })
         .always(function() {
         	console.log("module creation complete");
         });
 		function modCloser() {
-			var confirm = document.getElementById("module-confirm");
-			confirm.style.display = "none";
+			$("#module-confirm").css("display", "none");
 		}
     });
 
