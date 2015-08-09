@@ -5,7 +5,7 @@
 		$pagelist = glob("pages/*/*.php");
 			foreach ($pagelist as $pages) {
 				$pagesSplit = explode("/",$pages);
-				echo '<li><a href="'. $pages .'" title="'. $pages .'">'. str_replace("-", " ",$pagesSplit[1]) .'</a></li>';
+				echo '<li><a href="'. $pages .'" title="'. $pages .'">'. $pagesSplit[1] .'</a></li>';
 			}
 
 		//for every other page

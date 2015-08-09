@@ -38,7 +38,7 @@ jQuery(document).ready(function($){
         $.ajax({
         	url: "php/new_module.php",
         	type: "POST",
-        	data: {select_page : $('#select_page').val(), module_title : $('#module_title').val(), module_textarea : $('#module_textarea').val(), column_width : $('#column_width').val()},
+        	data: {select_page : $('#select_page').val(), order : $('#order').val(), module_title : $('#module_title').val(), module_textarea : $('#module_textarea').val(), column_width : $('#column_width').val()},
         })
         .done(function(data) {
         	console.log("new module created");

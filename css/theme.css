@@ -1,7 +1,13 @@
 nav li{
 	display: inline-block;
+	border-right: 1px solid #1EAEDB;;
+}
+
+nav li:last-child{
+	border-right: none;
 }
 
 nav li a{
+	padding: 5px;
 	text-decoration: none;
 }

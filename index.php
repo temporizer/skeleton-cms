@@ -11,7 +11,7 @@
 <body>
 	<div class="container">
 		<div class="row twelve columns">
-			<h1>Home</h1>
+			<h1>home</h1>
 				<hr />
 			</div>
 		</div>
@@ -22,7 +22,7 @@
 		</nav>
 	</div>
 	<div class="container">
-		<div class="row twelve columns">
+		<div id="module-container" class="row twelve columns">
 			<?php
 				foreach (glob("modules/index/*.html") as $filename)
 				{
@@ -32,5 +32,6 @@
 		</div>
 	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script type="text/javascript" src="js/module.js"></script>
 </body>
 </html>

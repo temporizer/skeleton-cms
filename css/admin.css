@@ -26,6 +26,10 @@ textarea{
 	min-height: 300px;
 }
 
+#order{
+    max-width: 50px;
+}
+
 #current_pages, #current_modules, #current_images{
 max-height: 900px;
 overflow: scroll;

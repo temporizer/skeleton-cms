@@ -54,6 +54,8 @@
 						}
 					?>
 				</select>
+				<label>Page Order</label>
+				<input id="order" name="order" type="text"></input>
 				<label>Module Title</label>
 				<input id="module_title" name="module_title" type="text"></input><br/>
 				<label>Module Content</label>

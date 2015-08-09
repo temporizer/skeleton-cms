@@ -20,13 +20,14 @@
 	<body>
 		<div class="container">
 			<div class="row twelve columns">
-				<h1>'.$title.'</h1>
+				<h1>'.str_replace("-", " ",$title).'</h1>
 				<hr />
 			</div>
 			
-			<?php include "../../navigation.php" ; ?>
-
-			<div class="row twelve columns">
+			<nav>
+				<?php include "../../navigation.php" ; ?>
+			</nav>
+			<div id="module-container" class="row twelve columns">
 				<?php
 				foreach (glob("../../modules/'.$title.'/*.html") as $filename)
 				{
@@ -35,6 +36,8 @@
 				?>
 			</div>
 		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script type="text/javascript" src="../../js/module.js">
 	</body>
 	</html>
 	';
