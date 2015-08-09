@@ -11,7 +11,7 @@
 <div class="container">
 
 <?php
-$target_dir = "../images/";
+$target_dir = "../uploads/";
 $target_file = $target_dir . rand(1,9999) .  basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
 $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);

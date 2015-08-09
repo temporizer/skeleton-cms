@@ -11,8 +11,6 @@ jQuery(document).ready(function($){
 		});
 	});
 
-	console.log($('#admin-tabs button').attr('data-tab'));
-
 	//create new page
 	$('#new_page').on('submit',function(e){
         e.preventDefault();
