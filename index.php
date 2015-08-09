@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="css/theme.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<body>
+<body id="home">
 	<div class="container">
 		<div class="row twelve columns">
 			<h1>home</h1>
