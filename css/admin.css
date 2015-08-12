@@ -3,6 +3,17 @@ html, body, .container{
 	height: 100%;
 }
 
+.column, .columns, .column:first-child, 
+.columns:first-child{
+    margin-left: 0%;
+    padding: 0px 15px;
+}
+
+.button-danger{
+    background-color: #ff0000 !important;
+    color: #fff !important;
+}
+
 img{
 	max-width: 100%;
 }
@@ -12,8 +23,12 @@ img{
 	height: 100px;
 }
 
-#documentation{
+.page{
 	display: none;
+}
+
+#add-content{
+    display: block;
 }
 
 .container{
@@ -31,8 +46,8 @@ textarea{
 }
 
 #current_pages, #current_modules, #current_images{
-max-height: 900px;
-overflow: scroll;
+    max-height: 900px;
+    overflow: scroll;
 }
 
 #current_images li{
@@ -88,12 +103,14 @@ overflow: scroll;
     -webkit-animation-delay: 0.45s;
     animation-delay: 0.45s;
 }
-#page-confirm {
+
+/* page confirm */
+.page-confirm {
 	border-radius: 3px;
 	padding: 7px;
 	display: none;
 }
-#page-confirm-close {
+.page-confirm-close {
 	float: right;
     color: black;
     text-decoration: none;

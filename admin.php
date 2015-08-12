@@ -10,13 +10,15 @@
 <body>
 <div id="admin-tabs" class="container">
 	<button data-tab="add-content" class="button button-primary">Create Content</button>
-	<button data-tab="documentation" class="button ">Documentation</button>
+	<button data-tab="remove-content" class="button">Remove Content</button>
+	<button data-tab="upload-images" class="button">Upload Images</button>
+	<button data-tab="documentation" class="button">Documentation</button>
 </div>
 <div id="add-content" class="page container">
 	<div class="row twelve columns">
 		<div class="six columns">
 			<h3>Create New Page</h3>
-			<div id="page-confirm"></div>
+			<div class="page-confirm"></div>
 			<hr />
 			<form id="new_page">
 				<label>Page Title</label>
@@ -85,7 +87,7 @@
 		<div id="current_modules" class="six columns">
 			<h3>Current Modules</h3>
 			<hr />
-			<ul id="module-list">
+			<ul class="module-list">
 				<?php
 				$filelist = glob("modules/*/*.html");
 				foreach ($filelist as $file) {
@@ -95,53 +97,18 @@
 			</ul>
 		</div>
 	</div>
+</div>
 
-	<div class="row tweleve columns">
-			<div class="six columns">
-				<h3>Upload Image</h3>
-				<hr />
-				<form id="new_image" action="php/new_image.php" method="post" enctype="multipart/form-data">
-				    Select image to upload:
-				    <input type="file" name="fileToUpload" id="fileToUpload">
-				    <input class="button button-primary" type="submit" value="Upload Image" name="submit">
-				</form>
-			</div>
-			<div id="current_images" class="six columns">
-				<h3>Image Paths</h3>
-				<hr />
-				<ul>
-					<?php
-					$imagepath = glob("uploads/*");
-					foreach ($imagepath as $image) {
-						echo '<a href="' . $image . '"><li class="six columns"> <img src="' . $image . '"/><p>' . $image .'</p></li></a>';
-					}
-					?>
-				</ul>
-			</div>
-		</div>
+<div id="remove-content" class="page container">
+	<?php @include 'remove-content.php'; ?>
+</div>
+
+<div id="upload-images" class="page container">
+	<?php @include 'upload-images.php'; ?>
 </div>
 
 <div id="documentation" class="page container">
-	<div class="row tweleve columns">
-		<h3>Documentation</h3>
-		<hr />
-	</div>
-	<div class="row tweleve columns">
-		<h6><strong>Pages</strong></h6>
-		<p>By Default the index.php is already created for you, to create new pages simple right the title of the page you want to create and click submit.  To overwrite the module with new content just select the same page, click submit and the content will be replaced.</p>
-	</div>
-
-	<div class="row tweleve columns">
-		<h6><strong>Modules</strong></h6>
-		<p>To create new modules select the page you want the module to display on. If you want to display the module on several pages, just reselect the page and click submit again.</p>
-		<p>You can add HTML, CSS and JavaScript to your pages by directly entering it into the "Module Content" block.</p>
-		<p>If you would like to add images, first upload the image you would like to display, refresh the page, copy the image path and put it into an HTML image tag. See example:</p>
-		<ul>
-		<li>For index.php - <strong> &lt;img src="images/image_path_name.jpg" alt="image_description" /></strong></li>
-		<li>For all other pages - <strong> &lt;img src="../../images/image_path_name.jpg" alt="image_description" /></strong></li>
-		</ul>
-		<p>Select your column width to dictate how far the module will span across screen.</p>
-	</div>
+	<?php @include 'documentation.php'; ?>
 </div>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>

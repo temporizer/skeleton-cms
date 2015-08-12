@@ -10,7 +10,7 @@
 
 	//create module
 	$myfile = fopen("../modules/". $select_page . "/" . $title .".html", "w") or die("Unable to open file!");
-	$txt = '<div id="'. $order .'" class="'. $column_width . '"><h5>' . str_replace("-", " ",$title) . '</h5>';
+	$txt = '<div id="'. $order .'" class="'. $column_width . '"><h5 class="module_title">' . str_replace("-", " ",$title) . '</h5>';
 	fwrite($myfile, $txt);
 	$txt = '<div>' . $textarea . '</div></div>';
 	fwrite($myfile, $txt);

@@ -15,4 +15,9 @@ nav li a{
 .column, .columns, .column:first-child, 
 .columns:first-child{
 	margin-left: 0%;
+	padding: 0px 15px;
+}
+
+.module_title:first-letter{
+	text-transform: uppercase;
 }

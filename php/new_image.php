@@ -69,7 +69,7 @@ if ($uploadOk == 0) {
 
 <script>
 setTimeout(function(){
-window.history.back();
+window.history.go(-1);
 }, 3000);
 </script>
 

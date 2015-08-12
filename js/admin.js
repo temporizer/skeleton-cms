@@ -20,26 +20,26 @@ jQuery(document).ready(function($){
         	data: {page_title : $('#page_title').val()},
         })
         .done(function(data) {
-			$("#page-confirm").css("background-color", "#a0d3e8");
-			$("#page-confirm").css("display", "block");
-			$("#page-confirm").html('New page created successfully!<a href="#" id="page-confirm-close">x</a>');
-			$("#page-confirm-close").bind("click", pageCloser);
+			$(".page-confirm").css("background-color", "#a0d3e8");
+			$(".page-confirm").css("display", "block");
+			$(".page-confirm").html('New page created successfully!<a href="#" class="page-confirm-close">x</a>');
+			$(".page-confirm-close").bind("click", pageCloser);
         	console.log("new page created");
         	//refresh page list
 			$.ajax({url: "php/pagelist.php", success: function(data){$("#page-list").html(data);}});
         })
         .fail(function() {
-			$("#page-confirm").css("background-color", "#f08a24");
-			$("#page-confirm").css("display", "block");
-			$("#page-confirm").html('Error! New page not created.<a href="#" id="page-confirm-close">x</a>');
-			$("#page-confirm-close").bind("click", pageCloser);
+			$(".page-confirm").css("background-color", "#f08a24");
+			$(".page-confirm").css("display", "block");
+			$(".page-confirm").html('Error! New page not created.<a href="#" class="page-confirm-close">x</a>');
+			$(".page-confirm-close").bind("click", pageCloser);
         	console.log("error, page creation failed");
         })
         .always(function() {
         	console.log("module page complete");
         });
 		function pageCloser() {
-			$("#page-confirm").css("display", "none");
+			$(".page-confirm").css("display", "none");
 		}
     });
 
@@ -74,6 +74,40 @@ jQuery(document).ready(function($){
 			$("#module-confirm").css("display", "none");
 		}
     });
+
+	//delete content
+	$('#delete_content').on('submit',function(e){
+        e.preventDefault();
+        $.ajax({
+        	url: "php/delete_content.php",
+        	type: "POST",
+        	data: {remove_page_path : $('#remove_page_path').val(), remove_module_path : $('#remove_module_path').val()},
+        })
+        .done(function(data) {
+			$("#delete_content .page-confirm").css("background-color", "#a0d3e8");
+			$("#delete_content .page-confirm").css("display", "block");
+			$("#delete_content .page-confirm").html('Content deleted successfully!<a href="#" class="page-confirm-close">x</a>');
+			$("#delete_content .page-confirm-close").bind("click", pageCloser);
+        	console.log("content deleted");
+        	//refresh page & module list
+			$.ajax({url: "php/pagelist.php", success: function(data){$(".page-list").html(data);}});
+			$.ajax({url: "php/modulelist.php", success: function(data){$(".module-list").html(data);}});
+        })
+        .fail(function() {
+			$("#delete_content .page-confirm").css("background-color", "#f08a24");
+			$("#delete_content .page-confirm").css("display", "block");
+			$("#delete_content .page-confirm").html('Error! Content not deleted.<a href="#" class="page-confirm-close">x</a>');
+			$("#delete_content .page-confirm-close").bind("click", pageCloser);
+        	console.log("error, deleting content");
+        })
+        .always(function() {
+        	console.log("deletion complete");
+        });
+		function pageCloser() {
+			$("#delete_content  .page-confirm").css("display", "none");
+		}
+    });
+
 
 
 //end script
