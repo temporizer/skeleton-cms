@@ -2,7 +2,7 @@
 Flat File CMS (Active Development)
 
 ##Pages
-By Defualt the index.php is already created for you, to create new pages simple right the title of the page you want to create and click submit.  To overwrite the module with new content just select the same page, click submit and the content will be replaced.
+By Default the index.php is already created for you, to create new pages simple right the title of the page you want to create and click submit.  To overwrite the module with new content just select the same page, click submit and the content will be replaced.
 		
 ##Modules
 To create new modules select the page you want the module to display on. If you want to display the module on several pages, just reselect the page and click submit again.**UPLOAD YOUR IMAGES FIRST BEFORE CREATING YOUR MODULE**
