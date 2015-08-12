@@ -25,6 +25,7 @@ jQuery(document).ready(function($){
 			$("#page-confirm").html('New page created successfully!<a href="#" id="page-confirm-close">x</a>');
 			$("#page-confirm-close").bind("click", pageCloser);
         	console.log("new page created");
+        	//refresh page list
 			$.ajax({url: "php/pagelist.php", success: function(data){$("#page-list").html(data);}});
         })
         .fail(function() {
@@ -56,6 +57,8 @@ jQuery(document).ready(function($){
 			$("#module-confirm").html('New module created successfully!<a href="#" id="module-confirm-close">x</a>');
 			$("#module-confirm-close").bind("click", modCloser);
         	console.log("new module created");
+        	//refresh module list
+        	$.ajax({url: "php/modulelist.php", success: function(data){$("#module-list").html(data);}});
         })
         .fail(function() {
 			$("#module-confirm").css("background-color", "#f08a24");
