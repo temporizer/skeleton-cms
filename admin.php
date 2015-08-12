@@ -8,6 +8,9 @@
 	<link rel="stylesheet" href="css/admin.css">
 </head>
 <body>
+	<div id="admin-title" class="container">
+		<h1>Skeleton CMS</h1>
+	</div>
 <div id="admin-tabs" class="container">
 	<button data-tab="add-content" class="button button-primary">Create Content</button>
 	<button data-tab="remove-content" class="button">Remove Content</button>

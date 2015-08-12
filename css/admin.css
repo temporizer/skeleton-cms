@@ -18,8 +18,12 @@ img{
 	max-width: 100%;
 }
 
+#admin-title{
+    margin-top: 15px;
+    height: auto;
+}
+
 #admin-tabs{
-	margin-top: 15px;
 	height: 100px;
 }
 
