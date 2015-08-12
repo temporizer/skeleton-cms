@@ -25,6 +25,7 @@ jQuery(document).ready(function($){
 			$("#page-confirm").html('New page created successfully!<a href="#" id="page-confirm-close">x</a>');
 			$("#page-confirm-close").bind("click", pageCloser);
         	console.log("new page created");
+			$.ajax({url: "php/pagelist.php", success: function(data){$("#page-list").html(data);}});
         })
         .fail(function() {
 			$("#page-confirm").css("background-color", "#f08a24");
