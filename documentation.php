@@ -18,3 +18,8 @@
 	</ul>
 	<p>Select your column width to dictate how far the module will span across screen.</p>
 </div>
+
+<div class="row tweleve columns">
+	<h6><strong>Modules</strong></h6>
+	<p>To delete content copy the file path from the "Remove Content" portion of the admin directory. and paste it into the corresponding filed. Make sure the file path excludes "../", the paths should all start with "pages", "modules", "images".</p>
+</div>
