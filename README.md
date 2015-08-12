@@ -14,3 +14,6 @@ If you would like to add images, first upload the image you would like to displa
 -For all other pages : `<img src="../../images/image_path_name.jpg" alt="image_description" />`
 
 Select your column width to dicatate how far the module will span accross screen.
+
+##Delete Content
+To delete content copy the file path from the "Remove Content" portion of the admin directory. and paste it into the corresponding filed. Make sure the file path excludes "../", the paths should all start with "pages", "modules", "images".
