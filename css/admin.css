@@ -18,6 +18,19 @@ img{
 	max-width: 100%;
 }
 
+#login-page{
+    width: 300px;
+    height: 300px;
+   position: absolute;
+   top: 40%;
+   left: 50%;
+   margin: -150px 0 0 -150px;
+}
+
+#login-page input{
+    width: 100%;
+}
+
 #admin-title{
     margin-top: 15px;
     height: auto;

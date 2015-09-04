@@ -1,3 +1,7 @@
+<?php
+	@include 'php/user.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +13,7 @@
 </head>
 <body>
 	<div id="admin-title" class="container">
-		<h1>Skeleton CMS</h1>
+		<img style="width: 100%; max-width: 300px;" src="skeleton-logo.png" alt="skeleton cms" />
 	</div>
 <div id="admin-tabs" class="container">
 	<button data-tab="add-content" class="button button-primary">Create Content</button>

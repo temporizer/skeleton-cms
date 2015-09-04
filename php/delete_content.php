@@ -1,4 +1,5 @@
 <?php 
+@include 'user.php';
 //delete page
 $page_path 			= $_POST['remove_page_path'];
 $page_directory 	= explode("/", $page_path );

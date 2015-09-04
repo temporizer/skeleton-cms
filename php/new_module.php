@@ -1,4 +1,6 @@
 <?php
+	@include 'user.php';
+
 	$title 			= str_replace(" ", "-", strtolower($_POST['module_title']));
 	$order			= $_POST['order'];
 	$textarea 		= $_POST['module_textarea'];

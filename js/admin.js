@@ -1,6 +1,13 @@
 jQuery.noConflict();
 jQuery(document).ready(function($){
 
+    //login
+    $('#login').on('click touchstart', function(e){
+        e.preventDefault();
+        document.cookie = "username =" + $('#username').val();
+        document.cookie = "password =" + $('#password').val();
+    });
+
 	//change tabs
 	$('#admin-tabs button').on('click', function(){
 		$(this).addClass('button-primary');

@@ -1,3 +1,7 @@
+<?php
+	@include 'php/user.php';
+?>
+
 <div class="row tweleve columns">
 	<div class="six columns">
 		<h3>Upload Image</h3>

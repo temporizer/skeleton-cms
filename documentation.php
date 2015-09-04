@@ -1,3 +1,7 @@
+<?php
+	@include 'php/user.php';
+?>
+
 <div class="row tweleve columns">
 	<h3>Documentation</h3>
 	<hr />
