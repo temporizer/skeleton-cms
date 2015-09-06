@@ -137,6 +137,12 @@ jQuery(document).ready(function($){
 			$("#delete_content  .page-confirm").css("display", "none");
 		}
     });
+    
+    //delete cookie on window close
+    $(window).on('unload', function(){
+        document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
+        document.cookie = "password=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
+    });
 
 
 
