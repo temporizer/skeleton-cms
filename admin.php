@@ -11,11 +11,13 @@
 		<link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="css/skeleton.css">
 		<link rel="stylesheet" href="css/admin.css">
+		<link rel="stylesheet" href="css/jquery.cleditor.css">
 	</head>
 	<body>
 		<div id="admin-title" class="container">
 			<img style="width: 100%; max-width: 300px;" src="skeleton-logo.png" alt="skeleton cms" />
 		</div>
+		<br />
 	<div id="admin-tabs" class="container">
 		<button data-tab="add-content" class="button button-primary">Create Content</button>
 		<button data-tab="remove-content" class="button">Remove Content</button>
@@ -121,8 +123,7 @@
 	</div>
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-		<script src="//tinymce.cachefly.net/4.2/tinymce.min.js"></script>
-		<script>tinymce.init({selector:'textarea'});</script>
+		<script src="js/jquery.cleditor.min.js" type="text/javascript"></script>
 		<script src="js/admin.js" type="text/javascript"></script>
 	</body>
 	</html>
