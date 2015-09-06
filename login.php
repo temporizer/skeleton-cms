@@ -14,14 +14,14 @@
 
 			<form>
 				<input id="username" type="text"  name="username" placeholder="username">
-				<input id="password" type="text" name="password" placeholder="password">
+				<input id="password" type="password" name="password" placeholder="password">
 				<input id="login" type="submit" name="submit" class="button button-primary"></input>
 			</form>
 
 		<?php } else { ?>
 			<form id="create_user">
 				<input id="create_username" type="text"  name="create_username" placeholder="create username">
-				<input id="create_password" type="text" name="create_password" placeholder="create password">
+				<input id="create_password" type="password" name="create_password" placeholder="create password">
 				<input id="new_user" type="submit" name="submit_user" class="button button-primary"></input>
 			</form>
 		<?php } ?>
