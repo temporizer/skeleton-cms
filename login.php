@@ -10,6 +10,7 @@
 <body>
 	<div id="login-page">
 		<img style="width: 100%; max-width: 300px;" src="skeleton-logo.png" alt="skeleton cms" />
+		<br />
 		<?php if(file_exists('user.php')){ ?> 
 
 			<form>
