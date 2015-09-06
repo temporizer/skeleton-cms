@@ -71,6 +71,20 @@
 					<input id="order" name="order" type="text"></input>
 					<label>Module Title</label>
 					<input id="module_title" name="module_title" type="text"></input><br/>
+			</div>
+			<div id="current_modules" class="six columns">
+				<h3>Current Modules</h3>
+				<hr />
+				<ul class="module-list">
+					<?php
+					$filelist = glob("modules/*/*.html");
+					foreach ($filelist as $file) {
+						echo "<li>".$file."</li>";
+					}
+					?>
+				</ul>
+			</div>
+			<div class="twelve columns">
 					<label>Module Content</label>
 					<textarea id="module_textarea" name="module_textarea" id="" cols="30" rows="10"></textarea><br/>
 					<label>Column Width</label>
@@ -90,19 +104,6 @@
 					</select><br/>
 					<input type="submit" name="submit" class="button button-primary"></input>
 				</form>
-			</div>
-
-			<div id="current_modules" class="six columns">
-				<h3>Current Modules</h3>
-				<hr />
-				<ul class="module-list">
-					<?php
-					$filelist = glob("modules/*/*.html");
-					foreach ($filelist as $file) {
-						echo "<li>".$file."</li>";
-					}
-					?>
-				</ul>
 			</div>
 		</div>
 	</div>
