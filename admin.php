@@ -120,6 +120,8 @@
 	</div>
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script src="//tinymce.cachefly.net/4.2/tinymce.min.js"></script>
+		<script>tinymce.init({selector:'textarea'});</script>
 		<script src="js/admin.js" type="text/javascript"></script>
 	</body>
 	</html>
