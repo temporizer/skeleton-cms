@@ -13,6 +13,17 @@ jQuery(document).ready(function($){
 		    $(parentContainer).append(elems);
 	};
 
-	modules 	= new SortModules('#module-container', '.columns');
+	modules 	= new SortModules('#module-container', '.skeleton-module');
+
+	//view module positions if '#positions' is in url
+	if(document.URL.indexOf('#positions') > -1){
+		$('.skeleton-module').each(function(){
+			$(this).append('<div class="position">'+$(this).attr('id')+'</div>');
+		});
+
+		$('.skeleton-module').css({
+			'border' : '1px solid #1EAEDB'
+		});
+	}
 
 });

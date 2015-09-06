@@ -1,6 +1,6 @@
 nav li{
 	display: inline-block;
-	border-right: 1px solid #1EAEDB;;
+	border-right: 1px solid #1EAEDB;
 }
 
 nav li:last-child{
@@ -15,9 +15,23 @@ nav li a{
 .column, .columns, .column:first-child, 
 .columns:first-child{
 	margin-left: 0%;
-	padding: 0px 15px;
 }
 
-.module_title:first-letter{
-	text-transform: uppercase;
+.skeleton-module{
+	position: relative;
+}
+
+.position{
+	width: 25px;
+	height: 25px;
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	margin-left: -15px;
+	margin-top: -25px;
+	border-radius: 100%;
+	text-align: center;
+	background-color: #1EAEDB;
+	color: #fff;
+	padding: 5px 5px 2px 2px;
 }
