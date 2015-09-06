@@ -144,7 +144,5 @@ jQuery(document).ready(function($){
         document.cookie = "password=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
     });
 
-    //view module positions
-
 //end script
 });
