@@ -2,10 +2,33 @@ jQuery.noConflict();
 jQuery(document).ready(function($){
 
     //login
-    $('#login').on('click touchstart', function(e){
+    //create new user file
+    $('#create_user').on('submit',function(e){
         e.preventDefault();
-        document.cookie = "username =" + $('#username').val();
-        document.cookie = "password =" + $('#password').val();
+        $.ajax({
+            url: "php/create_user.php",
+            type: "POST",
+            data: {create_username : $('#create_username').val(), create_password : btoa($('#create_password').val())},
+        })
+        .done(function(data) {
+            console.log("user created");
+            location.reload();
+        })
+        .fail(function() {
+            console.log("error, user creation failed");
+        })
+        .always(function() {
+            console.log("user creation complete");
+        });
+    });
+
+    //if user file exists
+    $('#login').on('click touchstart', function(e){
+        e.preventDefault(); 
+        console.log($('#username').val()+" "+$('#password').val());
+        document.cookie="username"+"="+$('#username').val();
+        document.cookie="password"+"="+btoa($('#password').val());
+        window.location = "admin.php";
     });
 
 	//change tabs

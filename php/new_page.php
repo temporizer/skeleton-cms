@@ -1,6 +1,4 @@
-<?php
-	@include 'user.php';
-	
+<?php	
 	$title 	= str_replace(" ", "-", strtolower($_POST['page_title']));
 
 	//create directory
