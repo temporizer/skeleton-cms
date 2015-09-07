@@ -1,8 +1,6 @@
 jQuery.noConflict();
 jQuery(document).ready(function($){
 
-    $("#module_textarea").cleditor();
-
     //login
     //create new user file
     $('#create_user').on('submit',function(e){
