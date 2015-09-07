@@ -8,10 +8,10 @@ jQuery(document).ready(function($){
         $.ajax({
             url: "php/create_user.php",
             type: "POST",
-            data: {create_username : $('#create_username').val(), create_password : btoa($('#create_password').val())},
+            data: {create_username : $.md5($('#create_username').val()), create_password : $.md5($('#create_password').val())},
         })
         .done(function(data) {
-            console.log("user created");
+            console.log($('#create_password').val());
             location.reload();
         })
         .fail(function() {
@@ -25,9 +25,8 @@ jQuery(document).ready(function($){
     //if user file exists
     $('#login').on('click touchstart', function(e){
         e.preventDefault(); 
-        console.log($('#username').val()+" "+$('#password').val());
-        document.cookie="username"+"="+$('#username').val();
-        document.cookie="password"+"="+btoa($('#password').val());
+        document.cookie="username"+"="+$.md5($('#username').val());
+        document.cookie="password"+"="+$.md5($('#password').val());
         window.location = "admin.php";
     });
 
