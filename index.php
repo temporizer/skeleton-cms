@@ -23,15 +23,12 @@
 		<div class="row twelve columns">
 			<h1>home</h1>
 				<hr />
-			</div>
 		</div>
-	</div>
-	<div class="container">
-		<nav class="row twelve columns">
-			<?php include 'navigation.php' ; ?>
+
+		<nav>
+			<?php include "navigation.php" ; ?>
 		</nav>
-	</div>
-	<div class="container">
+
 		<div id="module-container" class="row twelve columns">
 			<?php
 				foreach (glob("modules/index/*.html") as $filename)
