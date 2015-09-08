@@ -14,6 +14,7 @@
 		<link rel="stylesheet" href="../../css/normalize.css">
 		<link rel="stylesheet" href="../../css/skeleton.css">
 		<link rel="stylesheet" href="../../css/theme.css">
+		<link rel="stylesheet" href="../../css/custom.css">
 			<?php
 				foreach (glob("../../plugins/*") as $pluginstyles)
 				{
@@ -48,6 +49,7 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 		<script type="text/javascript" src="../../js/navigation.js"></script>
 		<script type="text/javascript" src="../../js/module.js"></script>
+		<script type="text/javascript" src="../../js/custom.js"></script>
 		<?php
 			foreach (glob("../../plugins/*") as $pluginscripts)
 			{

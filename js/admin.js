@@ -151,5 +151,65 @@ jQuery(document).ready(function($){
         document.cookie = "password=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
     });
 
+    //custom css
+    $('#custom-css').on('submit',function(e){
+        e.preventDefault();
+        $.ajax({
+            url: "php/custom-css.php",
+            type: "POST",
+            data: {css_canvas : $('#css_canvas').val()},
+        })
+        .done(function(data) {
+            $("#delete_content .page-confirm").css("background-color", "#a0d3e8");
+            $("#delete_content .page-confirm").css("display", "block");
+            $("#delete_content .page-confirm").html('CSS updated successfully!<a href="#" class="page-confirm-close">x</a>');
+            $("#delete_content .page-confirm-close").bind("click", pageCloser);
+            console.log("css updating");
+        })
+        .fail(function() {
+            $("#delete_content .page-confirm").css("background-color", "#f08a24");
+            $("#delete_content .page-confirm").css("display", "block");
+            $("#delete_content .page-confirm").html('Error! Content not deleted.<a href="#" class="page-confirm-close">x</a>');
+            $("#delete_content .page-confirm-close").bind("click", pageCloser);
+            console.log("error, updating css");
+        })
+        .always(function() {
+            console.log("css updated");
+        });
+        function pageCloser() {
+            $("#delete_content  .page-confirm").css("display", "none");
+        }
+    });
+
+    //custom css
+    $('#custom-js').on('submit',function(e){
+        e.preventDefault();
+        $.ajax({
+            url: "php/custom-js.php",
+            type: "POST",
+            data: {js_canvas : $('#js_canvas').val()},
+        })
+        .done(function(data) {
+            $("#delete_content .page-confirm").css("background-color", "#a0d3e8");
+            $("#delete_content .page-confirm").css("display", "block");
+            $("#delete_content .page-confirm").html('CSS updated successfully!<a href="#" class="page-confirm-close">x</a>');
+            $("#delete_content .page-confirm-close").bind("click", pageCloser);
+            console.log("js updating");
+        })
+        .fail(function() {
+            $("#delete_content .page-confirm").css("background-color", "#f08a24");
+            $("#delete_content .page-confirm").css("display", "block");
+            $("#delete_content .page-confirm").html('Error! Content not deleted.<a href="#" class="page-confirm-close">x</a>');
+            $("#delete_content .page-confirm-close").bind("click", pageCloser);
+            console.log("error, updating js");
+        })
+        .always(function() {
+            console.log("js updated");
+        });
+        function pageCloser() {
+            $("#delete_content  .page-confirm").css("display", "none");
+        }
+    });
+
 //end script
 });

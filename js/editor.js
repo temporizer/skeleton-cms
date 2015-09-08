@@ -1,4 +1,4 @@
 jQuery.noConflict();
 jQuery(document).ready(function($){
-	$('textarea').cleditor();
+	$('#module_textarea').cleditor();
 });

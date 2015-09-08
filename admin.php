@@ -23,6 +23,7 @@
 		<button data-tab="remove-content" class="button">Remove Content</button>
 		<button data-tab="upload-images" class="button">Upload Images</button>
 		<button data-tab="plugins" class="button">Plugins / Themes</button>
+		<button data-tab="custom" class="button">Custom CSS / JavaScript</button>
 		<button data-tab="documentation" class="button">Documentation</button>
 	</div>
 	<div id="add-content" class="page container">
@@ -94,7 +95,7 @@
 			</div>
 			<div class="twelve columns">
 					<label>Module Content</label>
-					<textarea id="module_textarea" name="module_textarea" id="" cols="30" rows="10"></textarea><br/>
+					<textarea id="module_textarea" name="module_textarea" cols="30" rows="10"></textarea><br/>
 					<label>Column Width</label>
 					<select id="column_width" name="column_width">
 						<option value="one columns">one</option>
@@ -126,6 +127,10 @@
 
 	<div id="plugins" class="page container">
 		<?php @include 'plugins.php'; ?>
+	</div>
+
+	<div id="custom" class="page container">
+		<?php @include 'custom.php'; ?>
 	</div>
 
 	<div id="documentation" class="page container">

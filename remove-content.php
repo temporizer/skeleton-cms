@@ -1,7 +1,3 @@
-<?php
-	@include 'php/user.php';
-?>
-
 <div class="row twelve columns">
 	<div class="twelve columns">
 		<h3>Remove Content</h3>
