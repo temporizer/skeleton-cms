@@ -6,6 +6,7 @@
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/skeleton.css">
 	<link rel="stylesheet" href="css/theme.css">
+	<link rel="stylesheet" href="plugins/font-awesome.css">
 	<?php
 		foreach (glob("plugins/*") as $pluginstyles)
 		{
@@ -17,6 +18,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body id="home">
+	<i id="mobile-menu-icon" class="fa fa-bars"></i>
 	<div class="container">
 		<div class="row twelve columns">
 			<h1>home</h1>

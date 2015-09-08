@@ -2,7 +2,7 @@
 Flat File CMS (Active Development)
 
 ##Login
-Is your URL/login.php , if you are a new user you will be prompted to create a new user.  Then you will be able to log in to the administration panel. If you close your browser or administration panel you will be logged out. 
+To login you must go to "your-site-name/login.php", if you have not created a user you will be prompted to create one, after you can login and control your site from "your-site-name/admin.php. 
 
 ##Pages
 By Default the index.php is already created for you, to create new pages simple right the title of the page you want to create and click submit.  To overwrite the module with new content just select the same page, click submit and the content will be replaced.
@@ -25,3 +25,6 @@ To delete content copy the file path from the "Remove Content" portion of the ad
 To find out what order your module is in, go to the page in question containing the modules. At the end of the URL in your browser type "#positions" in and run the URL with '#positions' appended to it. You may have to to ask the browser to accept the modification twice in order to appear.
 
 You should now see the associated numbers border around the modules on the page that you are viewing.
+
+##Plugins And Themes
+Plugins and themes are uploaded in the format of HTML, CSS, (JS) JavaScript/jQuery and PHP files. These files are intended to extend the functionality of your site or modify they look of it. HTML and PHP files will not appear in your plugin selection as they are not intended to be primary/ choice uploads to modify your site. 

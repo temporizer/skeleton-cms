@@ -26,6 +26,7 @@
 		<title>'.$title.'</title>
 	</head>
 	<body>
+		<i id="mobile-menu-icon" class="fa fa-bars"></i>
 		<div class="container">
 			<div class="row twelve columns">
 				<h1>'.str_replace("-", " ",$title).'</h1>
