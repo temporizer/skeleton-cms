@@ -22,6 +22,7 @@
 		<button data-tab="add-content" class="button button-primary">Create Content</button>
 		<button data-tab="remove-content" class="button">Remove Content</button>
 		<button data-tab="upload-images" class="button">Upload Images</button>
+		<button data-tab="plugins" class="button">Plugins / Themes</button>
 		<button data-tab="documentation" class="button">Documentation</button>
 	</div>
 	<div id="add-content" class="page container">
@@ -116,6 +117,10 @@
 
 	<div id="upload-images" class="page container">
 		<?php @include 'upload-images.php'; ?>
+	</div>
+
+	<div id="plugins" class="page container">
+		<?php @include 'plugins.php'; ?>
 	</div>
 
 	<div id="documentation" class="page container">

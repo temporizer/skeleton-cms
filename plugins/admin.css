@@ -82,11 +82,11 @@ textarea{
 
 
 /*image upload */
-#image-, #plugin-upload{
+#image-upload{
 	background-color: #33C3F0;
 }
 
-#image-upload h2, #plugin-upload h2{
+#image-upload h2{
 	margin-left: -140px;
     color: #fff;
 }

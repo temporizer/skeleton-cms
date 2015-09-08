@@ -14,6 +14,14 @@
 		<link rel="stylesheet" href="../../css/normalize.css">
 		<link rel="stylesheet" href="../../css/skeleton.css">
 		<link rel="stylesheet" href="../../css/theme.css">
+			<?php
+				foreach (glob("plugins/*") as $pluginstyles)
+				{
+					if (strpos($pluginstyles,\'.css\') !== false) {
+					    echo \'<link rel="stylesheet" href='. $pluginstyles . '">';
+					}
+				}
+			?>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>'.$title.'</title>
 	</head>
@@ -36,9 +44,16 @@
 				?>
 			</div>
 		</div>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 		<script type="text/javascript" src="../../js/navigation.js"></script>
 		<script type="text/javascript" src="../../js/module.js"></script>
+		<?php
+			foreach (glob("plugins/*") as $pluginscripts)
+			{
+				if (strpos($pluginscripts,\'.js\') !== false) {
+					echo \'<script src="\'. $pluginscripts . \'" type="text/javascript"></script>\';
+				}
+			}
+		?>
 	</body>
 	</html>
 	';
