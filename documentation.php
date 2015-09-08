@@ -6,6 +6,7 @@
 	<h3>Documentation</h3>
 	<hr />
 </div>
+
 <div class="row tweleve columns">
 	<h6><strong>Login</strong></h6>
 	<p>To login you must go to <strong>"your-site-name/login.php"</strong>, if you have not created a user you will be prompted to create one, after you can login and control your site from <strong>"your-site-name/admin.php</strong></p>
@@ -26,6 +27,13 @@
 	<li>For all other pages - <strong> &lt;img src="../../images/image_path_name.jpg" alt="image_description" /></strong></li>
 	</ul>
 	<p>Select your column width to dictate how far the module will span across screen.</p>
+</div>
+
+<div class="row tweleve columns">
+	<h6><strong>Locating Modules</strong></h6>
+	<p>To find out what order your module is in, go to the page in question containing the modules. At the end of the URL in your browser type "#positions" in and run the URL with '#positions' appended to it. You may have to to ask the browser to accept the modification twice in order to appear.</p>
+
+	<p>You should now see the associated numbers border around the modules on the page that you are viewing.</p>
 </div>
 
 <div class="row tweleve columns">
