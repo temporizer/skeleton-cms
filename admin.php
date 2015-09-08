@@ -1,6 +1,6 @@
 <?php
-	@include 'user.php';
-	if($_COOKIE['username'] === $username && $_COOKIE['password'] === $password){
+		@include 'user.php';
+		if($_COOKIE['username'] === $username && $_COOKIE['password'] === $password){
 ?>
 
 	<!DOCTYPE html>
@@ -26,6 +26,11 @@
 		<button data-tab="documentation" class="button">Documentation</button>
 	</div>
 	<div id="add-content" class="page container">
+	<?php
+		if(!file_exists('user.php')){
+			echo '<p class="no-user">You have not created a user!</p>';
+		}
+	?>
 		<div class="row twelve columns">
 			<div class="six columns">
 				<h3>Create New Page</h3>
