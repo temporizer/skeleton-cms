@@ -7,6 +7,11 @@
 	<hr />
 </div>
 <div class="row tweleve columns">
+	<h6><strong>Login</strong></h6>
+	<p>To login you must go to <strong>"your-site-name/login.php"</strong>, if you have not created a user you will be prompted to create one, after you can login and control your site from <strong>"your-site-name/admin.php</strong></p>
+</div>
+
+<div class="row tweleve columns">
 	<h6><strong>Pages</strong></h6>
 	<p>By Default the index.php is already created for you, to create new pages simple right the title of the page you want to create and click submit.  To overwrite the module with new content just select the same page, click submit and the content will be replaced.</p>
 </div>
@@ -24,6 +29,11 @@
 </div>
 
 <div class="row tweleve columns">
-	<h6><strong>Modules</strong></h6>
+	<h6><strong>Plugins /  Themes</strong></h6>
+	<p>Plugins and themes are uploaded in the format of HTML, CSS, (JS) JavaScript/jQuery and PHP files. These files are intended to extend the functionality of your site or modify they look of it. HTML and PHP files will not appear in your plugin selection as they are not intended to be primary/ choice uploads to modify your site. </p>
+</div>
+
+<div class="row tweleve columns">
+	<h6><strong>Remove Content</strong></h6>
 	<p>To delete content copy the file path from the "Remove Content" portion of the admin directory. and paste it into the corresponding filed. Make sure the file path excludes "../", the paths should all start with "pages", "modules", "images".</p>
 </div>

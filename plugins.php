@@ -18,9 +18,9 @@
 		<ul id="plugin-list">
 		<?php
 			$pluginpath = glob("plugins/*");
-			foreach ($pluginpath as $plugin) {
-				echo '<p class="twelve columns">'. $plugin . '</p>';
-			}
+				foreach ($pluginpath as $plugin) {
+					echo '<p class="twelve columns">'. $plugin . '</p>';
+				}
 		?>
 		</ul>
 	</div>

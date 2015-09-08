@@ -15,10 +15,10 @@
 		<link rel="stylesheet" href="../../css/skeleton.css">
 		<link rel="stylesheet" href="../../css/theme.css">
 			<?php
-				foreach (glob("plugins/*") as $pluginstyles)
+				foreach (glob("../../plugins/*") as $pluginstyles)
 				{
 					if (strpos($pluginstyles,\'.css\') !== false) {
-					    echo \'<link rel="stylesheet" href='. $pluginstyles . '">';
+					    echo \'<link rel="stylesheet" href="\'. $pluginstyles . \'">\';
 					}
 				}
 			?>
@@ -44,10 +44,11 @@
 				?>
 			</div>
 		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 		<script type="text/javascript" src="../../js/navigation.js"></script>
 		<script type="text/javascript" src="../../js/module.js"></script>
 		<?php
-			foreach (glob("plugins/*") as $pluginscripts)
+			foreach (glob("../../plugins/*") as $pluginscripts)
 			{
 				if (strpos($pluginscripts,\'.js\') !== false) {
 					echo \'<script src="\'. $pluginscripts . \'" type="text/javascript"></script>\';
