@@ -1,5 +1,5 @@
 <?php
-		@include 'user.php';
+		@include_once 'user.php';
 		if($_COOKIE['username'] === $username && $_COOKIE['password'] === $password){
 ?>
 

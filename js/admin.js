@@ -28,8 +28,8 @@ jQuery(document).ready(function($){
     //if user file exists
     $('#login').on('click touchstart', function(e){
         e.preventDefault(); 
-        document.cookie="username"+"="+$.md5($('#username').val());
-        document.cookie="password"+"="+$.md5($('#password').val());
+        document.cookie="username="+$.md5($('#username').val());
+        document.cookie="password="+$.md5($('#password').val());
         window.location = "admin.php";
     });
 
@@ -138,12 +138,6 @@ jQuery(document).ready(function($){
 		function pageCloser() {
 			$("#delete_content  .page-confirm").css("display", "none");
 		}
-    });
-    
-    //delete cookie on window close
-    $(window).on('unload', function(){
-        document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
-        document.cookie = "password=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
     });
 
     //custom css
