@@ -29,6 +29,7 @@
 	<div id="add-content" class="page container">
 	<?php
 		if(!file_exists('user.php')){
+			echo '<style> body{margin-top : -50px</style>';
 			echo '<p class="no-user">You have not created a user!</p>';
 		}
 	?>

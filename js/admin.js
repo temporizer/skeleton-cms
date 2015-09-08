@@ -3,11 +3,6 @@ jQuery(document).ready(function($){
 
     //hide errors when no user exists
     $('br, b').wrapAll('<div class="error"></div>');
-    if($('div').hasClass('error')){
-        $('body').css({
-            'margin-top' : '-50px'
-        });
-    }
 
     //login
     //create new user file
