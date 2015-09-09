@@ -77,8 +77,8 @@ jQuery(document).ready(function($){
 		$(this).addClass('button-primary');
 		$(this).siblings('button').removeClass('button-primary');
 
-		$('#'+$(this).attr('data-tab')).fadeIn('fast', function() {
-			$(this).siblings('.page').fadeOut('fast');
+		$('#'+$(this).attr('data-tab')).fadeIn(100, function() {
+			$(this).siblings('.page').fadeOut(100);
 		});
 	});
 

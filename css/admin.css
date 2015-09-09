@@ -78,6 +78,10 @@ img{
 
 #add-content, #remove-content, #upload-images,
 #plugins, #custom, #documentation, #meta-data{
+    display: none;
+}
+
+#add-content{
     display: block;
 }
 
@@ -96,7 +100,6 @@ img{
     #add-content, #remove-content, #upload-images,
     #plugins, #custom, #documentation, #meta-data{
         width: 75%;
-        display: block;
         float: left;
     } 
 }
