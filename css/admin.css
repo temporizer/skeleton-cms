@@ -96,7 +96,6 @@ img{
     #add-content, #remove-content, #upload-images,
     #plugins, #custom, #documentation{
         width: 75%;
-        padding: 15px;
         display: block;
         float: left;
     } 

@@ -1,1 +1,0 @@
-<?php $username="fd144f65f19df1c7adaa116c44ce2617"; $password="e08c6baaea01c7acacdc603b78bd44f8"; ?>
