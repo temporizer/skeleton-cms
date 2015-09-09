@@ -136,10 +136,12 @@
 		</div>
 
 		<div id="custom" class="page container">
+			<div class="page-confirm"></div>
 			<?php @include 'custom.php'; ?>
 		</div>
 
 		<div id="meta-data" class="page container">
+			<div class="page-confirm"></div>
 			<?php @include 'meta-data.php'; ?>
 		</div>
 

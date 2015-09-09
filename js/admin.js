@@ -91,26 +91,26 @@ jQuery(document).ready(function($){
         	data: {page_title : $('#page_title').val()},
         })
         .done(function(data) {
-			$(".page-confirm").css("background-color", "#a0d3e8");
-			$(".page-confirm").css("display", "block");
-			$(".page-confirm").html('New page created successfully!<a href="#" class="page-confirm-close">x</a>');
-			$(".page-confirm-close").bind("click", pageCloser);
+			$("#add-content .page-confirm").css("background-color", "#a0d3e8");
+			$("#add-content .page-confirm").css("display", "block");
+			$("#add-content .page-confirm").html('New page created successfully!<a href="#" class="page-confirm-close">x</a>');
+			$("#add-content .page-confirm-close").bind("click", pageCloser);
         	console.log("new page created");
         	//refresh page list
 			$.ajax({url: "php/pagelist.php", success: function(data){$("#page-list").html(data);}});
         })
         .fail(function() {
-			$(".page-confirm").css("background-color", "#f08a24");
-			$(".page-confirm").css("display", "block");
-			$(".page-confirm").html('Error! New page not created.<a href="#" class="page-confirm-close">x</a>');
-			$(".page-confirm-close").bind("click", pageCloser);
+			$("#add-content .page-confirm").css("background-color", "#f08a24");
+			$("#add-content .page-confirm").css("display", "block");
+			$("#add-content .page-confirm").html('Error! New page not created.<a href="#" class="page-confirm-close">x</a>');
+			$("#add-content .page-confirm-close").bind("click", pageCloser);
         	console.log("error, page creation failed");
         })
         .always(function() {
         	console.log("module page complete");
         });
 		function pageCloser() {
-			$(".page-confirm").css("display", "none");
+			$("#add-content .page-confirm").css("display", "none");
 		}
     });
 
@@ -188,24 +188,24 @@ jQuery(document).ready(function($){
             data: {css_canvas : $('#css_canvas').val()},
         })
         .done(function(data) {
-            $("#delete_content .page-confirm").css("background-color", "#a0d3e8");
-            $("#delete_content .page-confirm").css("display", "block");
-            $("#delete_content .page-confirm").html('CSS updated successfully!<a href="#" class="page-confirm-close">x</a>');
-            $("#delete_content .page-confirm-close").bind("click", pageCloser);
+            $("#custom .page-confirm").css("background-color", "#a0d3e8");
+            $("#custom .page-confirm").css("display", "block");
+            $("#custom .page-confirm").html('CSS updated successfully!<a href="#" class="page-confirm-close">x</a>');
+            $("#custom .page-confirm-close").bind("click", pageCloser);
             console.log("css updating");
         })
         .fail(function() {
-            $("#delete_content .page-confirm").css("background-color", "#f08a24");
-            $("#delete_content .page-confirm").css("display", "block");
-            $("#delete_content .page-confirm").html('Error! Content not deleted.<a href="#" class="page-confirm-close">x</a>');
-            $("#delete_content .page-confirm-close").bind("click", pageCloser);
+            $("#custom .page-confirm").css("background-color", "#f08a24");
+            $("#custom .page-confirm").css("display", "block");
+            $("#custom .page-confirm").html('Error! CSS not deleted.<a href="#" class="page-confirm-close">x</a>');
+            $("#custom .page-confirm-close").bind("click", pageCloser);
             console.log("error, updating css");
         })
         .always(function() {
             console.log("css updated");
         });
         function pageCloser() {
-            $("#delete_content  .page-confirm").css("display", "none");
+            $("#custom  .page-confirm").css("display", "none");
         }
     });
 
@@ -218,24 +218,24 @@ jQuery(document).ready(function($){
             data: {js_canvas : $('#js_canvas').val()},
         })
         .done(function(data) {
-            $("#delete_content .page-confirm").css("background-color", "#a0d3e8");
-            $("#delete_content .page-confirm").css("display", "block");
-            $("#delete_content .page-confirm").html('CSS updated successfully!<a href="#" class="page-confirm-close">x</a>');
-            $("#delete_content .page-confirm-close").bind("click", pageCloser);
+            $("#custom .page-confirm").css("background-color", "#a0d3e8");
+            $("#custom .page-confirm").css("display", "block");
+            $("#custom .page-confirm").html('JS updated successfully!<a href="#" class="page-confirm-close">x</a>');
+            $("#custom .page-confirm-close").bind("click", pageCloser);
             console.log("js updating");
         })
         .fail(function() {
-            $("#delete_content .page-confirm").css("background-color", "#f08a24");
-            $("#delete_content .page-confirm").css("display", "block");
-            $("#delete_content .page-confirm").html('Error! Content not deleted.<a href="#" class="page-confirm-close">x</a>');
-            $("#delete_content .page-confirm-close").bind("click", pageCloser);
+            $("#custom .page-confirm").css("background-color", "#f08a24");
+            $("#custom .page-confirm").css("display", "block");
+            $("#custom .page-confirm").html('Error! JS not deleted.<a href="#" class="page-confirm-close">x</a>');
+            $("#custom .page-confirm-close").bind("click", pageCloser);
             console.log("error, updating js");
         })
         .always(function() {
             console.log("js updated");
         });
         function pageCloser() {
-            $("#delete_content  .page-confirm").css("display", "none");
+            $("#custom  .page-confirm").css("display", "none");
         }
     });
 
@@ -247,24 +247,24 @@ jQuery(document).ready(function($){
             data: {site_name : $('#site_name').val(), site_about : $('#site_about').val(), site_keywords : $('#site_keywords').val()},
         })
         .done(function(data) {
-            $("#delete_content .page-confirm").css("background-color", "#a0d3e8");
-            $("#delete_content .page-confirm").css("display", "block");
-            $("#delete_content .page-confirm").html('CSS updated successfully!<a href="#" class="page-confirm-close">x</a>');
-            $("#delete_content .page-confirm-close").bind("click", pageCloser);
+            $("#meta-data .page-confirm").css("background-color", "#a0d3e8");
+            $("#meta-data .page-confirm").css("display", "block");
+            $("#meta-data .page-confirm").html('Site meta data updated!<a href="#" class="page-confirm-close">x</a>');
+            $("#meta-data .page-confirm-close").bind("click", pageCloser);
             console.log("updating site info");
         })
         .fail(function() {
-            $("#delete_content .page-confirm").css("background-color", "#f08a24");
-            $("#delete_content .page-confirm").css("display", "block");
-            $("#delete_content .page-confirm").html('Error! Content not deleted.<a href="#" class="page-confirm-close">x</a>');
-            $("#delete_content .page-confirm-close").bind("click", pageCloser);
+            $("#meta-data .page-confirm").css("background-color", "#f08a24");
+            $("#meta-data .page-confirm").css("display", "block");
+            $("#meta-data .page-confirm").html('Error! meta data not updated.<a href="#" class="page-confirm-close">x</a>');
+            $("#meta-data .page-confirm-close").bind("click", pageCloser);
             console.log("error, updating site info");
         })
         .always(function() {
             console.log("site info updated");
         });
         function pageCloser() {
-            $("#delete_content  .page-confirm").css("display", "none");
+            $("#meta-data  .page-confirm").css("display", "none");
         }
     });
 

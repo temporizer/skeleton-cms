@@ -1,9 +1,10 @@
 <div class="row twelve columns">
 	<div class="twelve columns">
 		<h3>Remove Content</h3>
-		<div class="page-confirm"></div>
+		<div class="delete-confirm"></div>
 		<hr />
 		<form id="delete_content">
+			<div class="page-confirm"></div>
 			<div class="six columns">
 				<strong>Page Path</strong>
 				<input id="remove_page_path" name="remove_page_path" type="text"></input>
