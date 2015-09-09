@@ -1,5 +1,5 @@
 # skeleton-cms
-Is a flat file cms that uses php write file ability to render HTML, CSS and JS on the fly.  You can upload and delete images, plugins and themes through the plugin manager. 
+Is a flat file cms that uses php write file ability to render HTML, CSS and JS on the fly.  You can upload and delete images, plugins and themes through the plugin manager. This system is built on skeleton css framework and comes pre-installed with font-awesome for icon management. 
 
 ##Login
 To login you must go to "your-site-name/login.php", if you have not created a user you will be prompted to create one, after you can login and control your site from "your-site-name/admin.php. 

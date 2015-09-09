@@ -19,6 +19,9 @@
 				<img style="width: 100%; max-width: 300px;" src="skeleton-logo.png" alt="skeleton cms" />
 			</div>
 			<br />
+			<div class="container">
+				<button id="content-menu" data-tab="content-menu" class="button button-primary admin-closed">Menu</button>
+			</div>
 		<div id="admin-tabs" class="container">
 			<button data-tab="add-content" class="button button-primary">Create Content</button>
 			<button data-tab="remove-content" class="button">Remove Content</button>

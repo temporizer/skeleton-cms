@@ -39,10 +39,10 @@ img{
 #login-page{
     width: 300px;
     height: 300px;
-   position: absolute;
-   top: 40%;
-   left: 50%;
-   margin: -150px 0 0 -150px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    margin: -150px 0 0 -150px;
 }
 
 #login-page input{
@@ -50,25 +50,60 @@ img{
 }
 
 #admin-title{
-    margin-top: 15px;
+    margin: 15px auto;
     height: auto;
 }
 
+#admin-title img{
+    display: block;
+    margin: 0 auto;
+}
+
 #admin-tabs{
-	height: 100px;
+    height: 0px;
+    overflow: hidden;
+}
+
+#admin-tabs .button{
+    width: 100%;
+}
+
+#content-menu{
+    width: 100%;
 }
 
 .page{
 	display: none;
 }
 
-#add-content{
+#add-content, #remove-content, #upload-images,
+#plugins, #custom, #documentation{
     display: block;
 }
 
+@media (min-width: 768px){
+    #content-menu{
+        display: none;
+    }
+
+     #admin-tabs{
+        width: 25%;
+        height: auto;
+        padding: 15px;
+        float: left;
+    } 
+
+    #add-content, #remove-content, #upload-images,
+    #plugins, #custom, #documentation{
+        width: 75%;
+        padding: 15px;
+        display: block;
+        float: left;
+    } 
+}
+
 .container{
-	max-width: 90%;
-	clear: both;
+    height: auto;
 }
 
 textarea{

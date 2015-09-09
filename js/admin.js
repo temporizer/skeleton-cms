@@ -1,6 +1,45 @@
 jQuery.noConflict();
 jQuery(document).ready(function($){
 
+    //admin menu
+    $(document).on('click', '.admin-closed', function(){
+        $('#admin-tabs').animate({
+            'height' : '300px'},
+            500, function() {
+            $('#content-menu').removeClass('admin-closed');
+            $('#content-menu').addClass('admin-open');
+        });
+    });
+
+    $(document).on('click', '.admin-open', function(){
+        $('#admin-tabs').animate({
+            'height' : '0px'},
+            500, function() {
+            $('#content-menu').removeClass('admin-open');
+            $('#content-menu').addClass('admin-closed');
+        });
+    });
+
+    $(window).resize(function() {
+        if($(window).width() > 768){
+            $('#admin-tabs').css({
+                'height' : 'auto' 
+            });
+
+            $('#content-menu').removeClass('admin-open');
+            $('#content-menu').addClass('admin-closed');
+        }
+
+        if($(window).width() < 768){
+            $('#admin-tabs').css({
+                'height' : '0px' 
+            });
+
+            $('#content-menu').removeClass('admin-open');
+            $('#content-menu').addClass('admin-closed');
+        }
+    });
+
     //hide errors when no user exists
     $('br, b').wrapAll('<div class="error"></div>');
 
