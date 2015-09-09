@@ -1,0 +1,1 @@
+<?php $site_name="Skeleton CMS"; $site_about="Skeleton CMS is a flat file CMS meaning it runs without a database"; $site_keywords="CMS, Content Management System, Awesome"; ?>

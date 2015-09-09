@@ -11,8 +11,6 @@
 <div class="container">
 
 <?php
-@include 'user.php';
-
 $target_dir = "../plugins/";
 $target_file = $target_dir . basename($_FILES["pluginToUpload"]["name"]);
 $uploadOk = 1;

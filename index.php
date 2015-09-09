@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<?php include 'site_info/site_info.php' ?>
+
 	<meta charset="UTF-8">
-	<title>Home</title>
+	<title><?php echo $site_name; ?></title>
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/skeleton.css">
 	<link rel="stylesheet" href="plugins/font-awesome.css">
@@ -17,18 +19,32 @@
 		}
 	?>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
+	<meta name="description" content="<?php echo $site_about; ?>">
+	<meta name="keywords" content="<?php echo $site_keywords; ?>">
 </head>
 <body id="home">
 	<i id="mobile-menu-icon" class="fa fa-bars"></i>
 	<div class="container">
-		<div class="row twelve columns">
-			<h1>home</h1>
-				<hr />
+
+		<div id="logo">
+			<?php
+				foreach (glob("uploads/*") as $logo)
+				{
+					if (strpos($logo,'logo') !== false) {
+					    echo '<img src="'. $logo . '">';
+					}
+				}
+			?>
 		</div>
 
 		<nav>
 			<?php include "navigation.php" ; ?>
 		</nav>
+
+		<div class="row twelve columns">
+				<hr />
+		</div>
 
 		<div id="module-container" class="row twelve columns">
 			<?php

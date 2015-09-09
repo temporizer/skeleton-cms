@@ -4,11 +4,17 @@
 		<div class="page-confirm"></div>
 		<hr />
 		<form id="delete_content">
-			<label>Page Path</label>
-			<input id="remove_page_path" name="remove_page_path" type="text"></input><br/>
-			<label>Module Path</label>
-			<input id="remove_module_path" name="remove_module_path" type="text"></input><br/>
-			<input type="submit" name="submit" class="button button-danger"></input>
+			<div class="six columns">
+				<strong>Page Path</strong>
+				<input id="remove_page_path" name="remove_page_path" type="text"></input>
+			</div>
+			<div class="six columns">
+				<strong>Module Path</strong>
+				<input id="remove_module_path" name="remove_module_path" type="text"></input>
+			</div>
+			<div class="six columns">
+				<input type="submit" name="submit" class="button button-danger"></input>
+			</div>
 		</form>
 	</div>
 </div>

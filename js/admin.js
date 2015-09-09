@@ -239,5 +239,34 @@ jQuery(document).ready(function($){
         }
     });
 
+    $('#site_data').on('submit',function(e){
+        e.preventDefault();
+        $.ajax({
+            url: "php/meta_data.php",
+            type: "POST",
+            data: {site_name : $('#site_name').val(), site_about : $('#site_about').val(), site_keywords : $('#site_keywords').val()},
+        })
+        .done(function(data) {
+            $("#delete_content .page-confirm").css("background-color", "#a0d3e8");
+            $("#delete_content .page-confirm").css("display", "block");
+            $("#delete_content .page-confirm").html('CSS updated successfully!<a href="#" class="page-confirm-close">x</a>');
+            $("#delete_content .page-confirm-close").bind("click", pageCloser);
+            console.log("updating site info");
+        })
+        .fail(function() {
+            $("#delete_content .page-confirm").css("background-color", "#f08a24");
+            $("#delete_content .page-confirm").css("display", "block");
+            $("#delete_content .page-confirm").html('Error! Content not deleted.<a href="#" class="page-confirm-close">x</a>');
+            $("#delete_content .page-confirm-close").bind("click", pageCloser);
+            console.log("error, updating site info");
+        })
+        .always(function() {
+            console.log("site info updated");
+        });
+        function pageCloser() {
+            $("#delete_content  .page-confirm").css("display", "none");
+        }
+    });
+
 //end script
 });

@@ -21,6 +21,18 @@
     font-size: medium;
 }
 
+#logo{
+	width: 250px;
+	height: 15px;
+	margin-top: 2.5rem;
+	margin-bottom: 2.5rem;
+	float: left;
+}
+
+#logo img{
+	max-width: 100%;
+}
+
 nav{
 	width: 200px;
 	height: 100vh;
@@ -45,13 +57,19 @@ nav li a{
 	}
 
 	nav{
-		position: relative;
-		width: 100%;
+		width: calc(100% - 250px);
+		float: right;
 		height: auto;
+		position: relative;
 		margin-left: 0px;
 		padding: 0px;
 		z-index: 1;
+		text-align: right;
 		background-color: transparent;
+	}
+
+	nav ul{
+		margin-top: 2.5rem;
 	}
 
 	nav li{

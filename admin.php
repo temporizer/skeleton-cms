@@ -28,6 +28,7 @@
 			<button data-tab="upload-images" class="button">Upload Images</button>
 			<button data-tab="plugins" class="button">Plugins / Themes</button>
 			<button data-tab="custom" class="button">Custom CSS / JavaScript</button>
+			<button data-tab="meta-data" class="button">Site Info</button>
 			<button data-tab="documentation" class="button">Documentation</button>
 		</div>
 		<div id="add-content" class="page container">
@@ -136,6 +137,10 @@
 
 		<div id="custom" class="page container">
 			<?php @include 'custom.php'; ?>
+		</div>
+
+		<div id="meta-data" class="page container">
+			<?php @include 'meta-data.php'; ?>
 		</div>
 
 		<div id="documentation" class="page container">
