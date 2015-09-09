@@ -4,7 +4,7 @@ jQuery(document).ready(function($){
     //admin menu
     $(document).on('click', '.admin-closed', function(){
         $('#admin-tabs').animate({
-            'height' : '300px'},
+            'height' : '340px'},
             500, function() {
             $('#content-menu').removeClass('admin-closed');
             $('#content-menu').addClass('admin-open');
