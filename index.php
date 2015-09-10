@@ -32,7 +32,7 @@
 				foreach (glob("uploads/*") as $logo)
 				{
 					if (strpos($logo,'logo') !== false) {
-					    echo '<img src="'. $logo . '">';
+					    echo ' <img src="'. $logo . '">';
 					}
 				}
 			?>
